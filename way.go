@@ -51,6 +51,12 @@ type Way struct {
 
 	// Bounds are included by overpass, and maybe others
 	Bounds *Bounds `xml:"bounds,omitempty" json:"bounds,omitempty"`
+
+	// Geometry is included by overpass, and maybe others
+	Geometry []struct {
+		Lat float64 `xml:"lat,attr,omitempty" json:"lat,omitempty"`
+		Lon float64 `xml:"lon,attr,omitempty" json:"lon,omitempty"`
+	} `xml:"geometry,omitempty" json:"geometry,omitempty"`
 }
 
 // WayNodes represents a collection of way nodes.
